@@ -10,13 +10,13 @@ A daily AI investment brief that lands in your Telegram at 8:45am. It reads Redd
 
 Every morning before market open:
 
-1. Scrapes ~100 high-signal Reddit posts across r/SecurityAnalysis, r/wallstreetbets, r/ValueInvesting, r/options, r/CanadianInvestor, and others — with calibrated score thresholds per subreddit so you get actual DD, not memes
+1. Scrapes ~100 posts from r/wallstreetbets, r/investing, r/stocks, r/options, r/SecurityAnalysis, r/ValueInvesting, r/CanadianInvestor, and others
 2. Fetches top comments too, because that's where the real analysis lives
 3. Sends all of it to Claude Sonnet, which extracts structured investment theses — ticker, sentiment, catalyst, bull/bear case, options potential, day trade setups
 4. Pulls live market data: RSI, volume ratio, short interest, analyst targets, IV, pre-market moves, insider buying, earnings calendar, Fear & Greed index
 5. Sends everything to Claude Opus, which writes a tight brief with specific plays, options suggestions, day trade setups, and a macro read
 
-You get a Telegram message that looks like a hedge fund analyst wrote it. Except it runs on your laptop and costs ~$0.40/day.
+Costs ~$0.40/day to run.
 
 ---
 
@@ -45,7 +45,7 @@ Every trade goes into `ledger.json`. Append-only. That's your track record.
 
 **1. Clone and install**
 ```bash
-git clone https://github.com/yourusername/gigathonk-investments
+git clone https://github.com/ritvikshankar105/gigathonk-investments
 cd gigathonk-investments
 uv venv && source .venv/bin/activate
 uv pip install -r requirements.txt
@@ -88,16 +88,16 @@ sudo pmset repeat wakeorpoweron MTWRFSU 21:00:00
 
 ```
 Reddit (~100 posts + comments)
-        ↓
+        |
   Claude Sonnet 4.6
   (ticker extraction, options/day trade flagging)
-        ↓
+        |
   yfinance + Fear & Greed API
   (RSI, volume, short interest, IV, insider buying, earnings)
-        ↓
+        |
   Claude Opus 4.6
   (synthesis, plain-English brief)
-        ↓
+        |
   Telegram
 ```
 
@@ -113,4 +113,4 @@ Reddit (~100 posts + comments)
 
 ## Cost
 
-~$0.40 USD per run. Claude Sonnet for extraction, Claude Opus for synthesis. Both via the Anthropic API.
+~$0.40 USD per run.
