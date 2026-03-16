@@ -1,0 +1,6 @@
+anthropic
+yfinance
+pandas
+requests
+python-telegram-bot
+python-decouple

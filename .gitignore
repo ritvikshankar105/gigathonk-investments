@@ -1,0 +1,24 @@
+# Secrets - never commit these
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Personal data — never commit
+memory.json
+positions.json
+ledger.json
+.last_update_id
