@@ -28,7 +28,7 @@ Reply to your Telegram bot after market close with what you bought:
 OXY 750 ADBE 500
 ```
 
-The listener wakes your Mac at 9pm, catches the message, saves your positions with the original thesis attached, and averages your cost basis if you add. Next morning's brief knows what you own and whether the thesis is still intact.
+The listener catches the message, saves your positions with the original thesis attached, and averages your cost basis if you add. Next morning's brief knows what you own and whether the thesis is still intact.
 
 ```
 sold OXY          — full exit, records gain
@@ -59,8 +59,6 @@ Fill in:
 - `ANTHROPIC_API_KEY` — from console.anthropic.com
 - `TELEGRAM_BOT_TOKEN` — create a bot via @BotFather
 - `TELEGRAM_CHAT_ID` — your chat ID (message @userinfobot)
-- `WEEKLY_DEPLOY_CAD` — your default weekly budget in CAD (default: 500)
-- `TOTAL_RISK_CAD` / `TOTAL_GROWTH_CAD` — your bucket limits
 
 **3. Set up cron**
 ```bash
@@ -110,12 +108,6 @@ Reddit (~100 posts + comments)
 - `positions.json` — what you actually own (gitignored)
 - `ledger.json` — permanent trade record (gitignored)
 - `memory.json` — rolling 90-day recommendation history (gitignored)
-
----
-
-## Built for
-
-Wealthsimple TFSA investing. Supports NYSE, NASDAQ, TSX, crypto, and options. All amounts in CAD. Tax-free gains only.
 
 ---
 
